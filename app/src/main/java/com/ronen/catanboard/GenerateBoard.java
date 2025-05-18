@@ -45,7 +45,7 @@ public class GenerateBoard {
             ArrayList<Integer> poss = new ArrayList<>(numbers);
 
             if (unavailable != null)
-                unavailable.forEach(poss::remove);
+                poss.removeAll(unavailable);
 
             if (poss.isEmpty())
                 return generateNumbers(board);
