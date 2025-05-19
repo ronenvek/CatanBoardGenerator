@@ -63,6 +63,18 @@ public class GenerateBoard {
         return values;
     }
 
+    public static String[] generatePorts(){
+        String[] options = {" |ore| ", "3| |brick", " |wood| ", "3| |wheat", " |3| ", "3| |sheep"};
+        ArrayList<String> poss = new ArrayList<>(Arrays.asList(options));
+        String[] ports = new String[6];
+        for (int i = 0; i < 6; i++){
+            int random = (int)(Math.random() * poss.size());
+            ports[i] = poss.get(random);
+            poss.remove(random);
+        }
+        return ports;
+    }
+
 
     private static void addBlock(int y, int x, HashMap<String, HashSet<Integer>> blocked, int val){
         String coords = "["+y + ", " + x + "]";

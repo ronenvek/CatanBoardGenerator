@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-public class Hexagon {
+public class Visuals {
 
 
     public static void drawHexagon(RelativeLayout layout, float centerX, float centerY, float size, String color, int val) {
@@ -68,5 +68,4 @@ public class Hexagon {
             default: return ContextCompat.getDrawable(MainActivity.app, R.drawable.hexagon);
         }
     }
-
 }
