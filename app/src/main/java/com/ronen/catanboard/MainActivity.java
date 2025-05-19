@@ -93,16 +93,14 @@ public class MainActivity extends AppCompatActivity {
             if (angle == 180 || angle == 240 || angle == 120){
                 angle -= 180;
                 String[] portTypes = port.split("\\|");
-                Log.e("portTypes", port);
-                Log.e("portTypes", Arrays.toString(portTypes));
                 port = portTypes[2] + "|" + portTypes[1] + "|" + portTypes[0];
             }
 
-            String cleanPort = port.replace("|", "     ").replace("3", "3:1");
+            String cleanPort = port.replace("|", "    ").replace("3", "3:1");
 
 
             portLabel.setText(cleanPort);
-            portLabel.setTextSize(hexagonSize / 10);
+            portLabel.setTextSize(hexagonSize / 10.5f);
             portLabel.setTextColor(Color.DKGRAY);
             portLabel.setGravity(Gravity.CENTER);
 
