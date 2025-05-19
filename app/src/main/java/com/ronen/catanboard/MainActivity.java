@@ -96,11 +96,10 @@ public class MainActivity extends AppCompatActivity {
                 port = portTypes[2] + "|" + portTypes[1] + "|" + portTypes[0];
             }
 
-            String cleanPort = port.replace("|", "    ").replace("3", "3:1");
-
+            String cleanPort = port.replace("|", "   ").replace("3", "3:1");
 
             portLabel.setText(cleanPort);
-            portLabel.setTextSize(hexagonSize / 10.5f);
+            portLabel.setTextSize(hexagonSize / 10);
             portLabel.setTextColor(Color.DKGRAY);
             portLabel.setGravity(Gravity.CENTER);
 
@@ -117,6 +116,9 @@ public class MainActivity extends AppCompatActivity {
 
             lp.leftMargin = (int)(px - (w / 2f));
             lp.topMargin  = (int)(py - (h / 2f));
+            lp.leftMargin = Math.max(0, Math.min(lp.leftMargin, displayMetrics.widthPixels - lp.width));
+            lp.topMargin  = Math.max(0, Math.min(lp.topMargin, displayMetrics.heightPixels - lp.height));
+
             portLabel.setLayoutParams(lp);
 
             layout.addView(portLabel);
