@@ -43,7 +43,7 @@ public class Visuals {
         valueText.setText(String.valueOf(val));
 
         if (val == 6 || val == 8)
-            valueText.setTextColor(Color.RED);
+            valueText.setTextColor(0xFFAC050F);
         else
             valueText.setTextColor(Color.BLACK);
 

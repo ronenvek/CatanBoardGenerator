@@ -17,9 +17,9 @@ public class Util {
         activity.runOnUiThread(() -> Toast.makeText(activity, message, Toast.LENGTH_SHORT).show());
     }
 
-    public static int resolveAttrColor(Context context, int attr) {
+    public static int resolveAttrColor(Context context) {
         TypedValue typedValue = new TypedValue();
-        context.getTheme().resolveAttribute(attr, typedValue, true);
+        context.getTheme().resolveAttribute(com.google.android.material.R.attr.colorOnSurface, typedValue, true);
         return typedValue.data;
     }
 }

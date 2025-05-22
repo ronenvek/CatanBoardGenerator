@@ -39,7 +39,7 @@ public class BoardActivity extends AppCompatActivity {
             return;
         }
         toolbar.setTitle(g);
-        findViewById(R.id.dividerToolbar).setBackgroundColor(Util.resolveAttrColor(this, com.google.android.material.R.attr.colorOnSurface));
+        findViewById(R.id.dividerToolbar).setBackgroundColor(Util.resolveAttrColor(this));
 
         String[] colors = GenerateBoard.generateColors();
         int[] values = GenerateBoard.generateNumbers(colors);
