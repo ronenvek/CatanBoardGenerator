@@ -53,6 +53,9 @@ public class BoardHistory extends AppCompatActivity {
             toolbar.setNavigationIcon(null);
             toolbar.setNavigationOnClickListener(null);
         }
+        findViewById(R.id.dividerToolbar).setBackgroundColor(Util.resolveAttrColor(this, com.google.android.material.R.attr.colorOnSurface));
+
+
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

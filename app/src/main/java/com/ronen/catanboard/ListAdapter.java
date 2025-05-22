@@ -96,8 +96,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             show = text.substring(0, text.length() - 8);
         if (isButton) {
             holder.button.setText(show);
+            holder.button.setTextColor(Util.resolveAttrColor(holder.view.getContext(), com.google.android.material.R.attr.colorOnSurface));
         } else {
             holder.textView.setText(show);
+            holder.textView.setTextColor(Util.resolveAttrColor(holder.view.getContext(), com.google.android.material.R.attr.colorOnSurface));
         }
 
         if (text.contains("NODELETE")) {
